@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+header {
+  background-image: url("mars.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+  margin-right: 5px;
+}
+
+ul li {
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.logo img {
+  float: left;
+  width: 50px;
+  height: auto;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content a {
+  position: relative;
+  text-decoration: none;
+  width: 390px;
+  height: 55px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Anurati", sans-serif;
+  padding: 50px;
+}
+
+.content a:before {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.content a:hover::before {
+  animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #fff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.content a:after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.content a:hover:after {
+  animation: animate2 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #fff;
+  }
+
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+  }
+}
